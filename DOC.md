@@ -1,6 +1,6 @@
 # Documentacao - Vendinha Plena
 
-Este arquivo explica o funcionamento do projeto Vendinha Plena. Ele foi feito para ajudar no estudo do codigo, das telas, das regras de negocio e do banco de dados.
+Este arquivo explica o funcionamento do projeto Vendinha Plena. Ele foi feito para ajudar no estudo do codigo, das telas, das regras de negocio, do banco de dados e auxilio para a apresentação.
 
 ## 1. Objetivo do projeto
 
@@ -195,7 +195,7 @@ Campo opcional. Se for informado, precisa estar em formato valido de e-mail.
 Exemplo:
 
 ```text
-cliente@email.com
+exemplo_cliente@email.com
 ```
 
 ## 5. Tela Clientes da Vendinha
@@ -235,7 +235,7 @@ Permite filtrar clientes por parte do nome.
 Exemplo:
 
 ```text
-Texto da busca: maria
+Texto da busca: zoio
 ```
 
 O sistema procura clientes que contenham esse texto no nome.
@@ -637,52 +637,7 @@ public int? DividaId { get; set; }
 public Divida? Divida { get; set; }
 ```
 
-## 12. Comandos uteis
-
-### Compilar o projeto
-
-```powershell
-dotnet build
-```
-
-### Executar o projeto principal
-
-```powershell
-dotnet run --project .\FinalBoss_Vendinha\FinalBoss_Vendinha.csproj
-```
-
-### Abrir no Visual Studio
-
-Abra o arquivo:
-
-```text
-FinalBoss_Vendinha.slnx
-```
-
-Depois defina `FinalBoss_Vendinha` como projeto de inicializacao e pressione:
-
-```text
-Ctrl + F5
-```
-
-## 13. Fluxo de exemplo para testar
-
-1. Abra o sistema.
-2. Escolha `1 - Registrar novo cliente`.
-3. Cadastre um cliente com CPF no formato `587.125.945-60`.
-4. Volte para a Home.
-5. Escolha `3 - Vendas feitas`.
-6. Escolha `1 - Registrar venda`.
-7. Informe o ID do cliente.
-8. Marque que a compra sera pendurada.
-9. Informe vencimento e parcelas.
-10. Volte para a Home.
-11. Escolha `4 - Dividas existentes`.
-12. Veja a divida criada.
-13. Se estiver atrasada, aplique juros.
-14. Quando o cliente pagar, use `2 - Quitar divida`.
-
-## 14. Resumo final
+## 12. Resumo final
 
 O projeto esta dividido em camadas simples:
 
@@ -700,5 +655,3 @@ Essa organizacao ajuda a separar responsabilidades:
 - o service concentra as regras;
 - o model representa os dados;
 - o DbContext configura o banco.
-
-Com isso, o codigo fica mais facil de entender, manter e explicar em apresentacao.
